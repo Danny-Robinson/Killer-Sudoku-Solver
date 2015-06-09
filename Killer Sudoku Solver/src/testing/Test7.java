@@ -30,10 +30,11 @@ public class Test7 {	//remove invalid pair poss
 		Test7 t7 = new Test7();
 		t7.printPoss(g);
 		solver.present(g);
+		System.out.println();
 		t7.printPoss(g);
 		System.out.println();
-		//solver.possExclusion(g);
 		t7.printPoss(g);
+		System.out.println();
 		solver.present(g);
 		t7.printPoss(g);
 		for (Cell cell: g.getRowList().get(0).getCellList()){

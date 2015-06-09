@@ -40,11 +40,11 @@ public class Cage extends Region{
 		cell.setCage(this);
 	}
 
-	public void refreshCage(){
+	public void refreshCage(){				//reset cell possibilities
 		Possible poss = new Possible();
 		if (this.getCageSize() > 1){
 			poss.setPoss(this, 0);
-		} else if (this.getCageSize() ==1 ){
+		} else if (this.getCageSize() == 1 ){	//set to common poss in case of virtual cages
 			poss.setPoss(this);
 		}
 	}
@@ -98,13 +98,14 @@ public class Cage extends Region{
 		cageSize = getCageSize() - 1;
 	}
 
-	public void addCell(Cell tempCell2, int i) { //for adding to tempCage
+	public void addCell(Cell tempCell2, int i) { //for adding to virtual cage
 		super.addCell(tempCell2);
 		this.cellCount++;
 		if (cellCount == cageSize){
 			Possible poss = new Possible();
 			poss.setPoss(this, 0);
 		}
+		//does not set cell to cage
 	}
 
 }

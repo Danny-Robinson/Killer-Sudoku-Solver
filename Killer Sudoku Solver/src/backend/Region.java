@@ -2,7 +2,7 @@ package backend;
 import java.util.ArrayList;
 
 
-public abstract class Region {
+public abstract class Region {   //superclass for cell/cage containers, N.B cages should never contain cages
 	protected int sumVal;
 	protected ArrayList<Cell> cells;
 	protected ArrayList<Cage> cages = new ArrayList<Cage>();
